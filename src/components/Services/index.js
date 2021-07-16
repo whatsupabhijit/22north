@@ -37,7 +37,7 @@ const ServicesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  /* background: #010606; */
 
   @media (max-width: 768px) {
     height: 1100px;

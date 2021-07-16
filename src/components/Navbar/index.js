@@ -34,7 +34,7 @@ const Navbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              TheBoxStep
+              22North
             </NavLogo>
 
             <MobileIcon onClick={toggle}>
@@ -102,10 +102,6 @@ const Navbar = ({ toggle }) => {
               </NavItem>
             ))} */}
             </NavMenu>
-
-            <NavBtn>
-              <NavBtnLink to="/signin">SignIn</NavBtnLink>
-            </NavBtn>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>

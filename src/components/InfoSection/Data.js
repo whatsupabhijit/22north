@@ -1,9 +1,9 @@
 export const homeObjAbout = {
   id: "about",
-  lightBg: false,
-  darkText: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  darkText: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "What do we do?",
   headLine: "We Inspire Growth for Ambitious Brands.",
   descriptions: [
@@ -23,10 +23,10 @@ export const homeObjAbout = {
 
 export const homeObjTeam = {
   id: "team",
-  lightBg: false,
-  darkText: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  darkText: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "Who are we?",
   headLine: "We are Goal oriented.",
   descriptions: [
@@ -34,7 +34,7 @@ export const homeObjTeam = {
     "Our technical team comprises of specialists working on varied cutting edge technology stack ensuring that your company is always on the top of it's game.",
   ],
   buttonLabel: "Get Started",
-  imgStart: false,
+  imgStart: true,
   img: require("../../assets/images/background.jpg").default,
   alt: "BoxStep Who Are We",
   dark: true,

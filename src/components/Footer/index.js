@@ -58,10 +58,10 @@ const Footer = () => {
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to="/" onClick={toggleHome}>
-                TheBoxStep
+                22North
               </SocialLogo>
               <WebsiteRights>
-                Box Step {new Date().getFullYear()}. All Rights Reserved.{" "}
+                22 North {new Date().getFullYear()}. All Rights Reserved.{" "}
               </WebsiteRights>
               <SocialIcons>
                 {/* <SocialIconLink href="/" target="_blank" aria-label="Facebook">
@@ -105,7 +105,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div`
-  background-color: #101522;
+  background-color: #1f4382;
 `;
 
 const FooterWrap = styled.div`

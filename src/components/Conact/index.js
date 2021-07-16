@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import { GrMap } from "react-icons/gr";
+import { ImLocation2 } from "react-icons/im";
+import { FiPhoneCall } from "react-icons/fi";
 import { GoMailRead } from "react-icons/go";
 import {
   FaFacebook,
@@ -82,20 +83,37 @@ const Contact = () => {
           <ContactInfo>
             <ContactInfoH2>Reach Us At</ContactInfoH2>
             <ContactInfoUl>
+              {/* 3. Address */}
+              <ContactInfoLi>
+                <IconContext.Provider value={{ color: "#fff", size: 30 }}>
+                  <ContactInfoSpan>
+                    <ImLocation2 />
+                  </ContactInfoSpan>
+                </IconContext.Provider>
+                <ContactInfoDetail>
+                  San Jose, <br /> CA 95124, USA
+                </ContactInfoDetail>
+              </ContactInfoLi>
+
               {/* 1. Mail */}
               <ContactInfoLi>
-                <IconContext.Provider value={{ color: "#fff", size: 40 }}>
+                <IconContext.Provider value={{ color: "#fff", size: 30 }}>
                   <ContactInfoSpan>
                     <GoMailRead />
                   </ContactInfoSpan>
                 </IconContext.Provider>
-                <ContactInfoDetail>info@theboxstep.com</ContactInfoDetail>
+                <ContactInfoDetail>info@22north.us</ContactInfoDetail>
               </ContactInfoLi>
 
               {/* 2. Contact */}
-
-              {/* 3. Address */}
-              {/* <GrMap /> */}
+              <ContactInfoLi>
+                <IconContext.Provider value={{ color: "#fff", size: 30 }}>
+                  <ContactInfoSpan>
+                    <FiPhoneCall />
+                  </ContactInfoSpan>
+                </IconContext.Provider>
+                <ContactInfoDetail>+1 408-850-0455</ContactInfoDetail>
+              </ContactInfoLi>
             </ContactInfoUl>
 
             <SocialMedia>
@@ -227,7 +245,7 @@ const ContactSection = styled.section`
     left: 0;
     width: 50%;
     height: 100%;
-    background: #74757a;
+    background: #c9d9f5;
   }
 
   @media (max-width: 991px) {
@@ -263,7 +281,7 @@ const ContactInfo = styled.div`
   top: 40px;
   width: 350px;
   height: calc(100% - 80px);
-  background: #803274;
+  background: #105fe8;
   z-index: 1;
   padding: 40px;
   display: flex;
@@ -351,6 +369,8 @@ const ContactInfoSpan = styled.span`
 
 const ContactInfoDetail = styled.span`
   margin-left: 15px;
+  font-size: 18px;
+  line-height: 18px;
 `;
 
 //
@@ -412,8 +432,10 @@ const ContactFormSubmit = styled.input.attrs({
   background: #095a55;
   color: #fff;
   border: none;
+  width: 100px;
   max-width: 150px;
   padding: 12px;
+  border-radius: 10%;
 
   &:hover {
     background: #0d948b;

@@ -1,0 +1,11 @@
+.carousel .slide {
+  background: #fff;
+}
+
+.carousel .control-dots {
+  margin: 60px auto;
+}
+
+.carousel li.slide img {
+  height: 720px;
+}
