@@ -69,12 +69,12 @@ const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
-  background-image: url(${(props) => props.bgImg});
+  /* background-image: url(${(props) => props.bgImg}); */
 
   /* Center and scale the image nicely */
-  background-position: bottom;
+  /* background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
   /* Add the blur effect */
   /* filter: blur(8px);
@@ -88,17 +88,13 @@ const InfoContainer = styled.div`
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 950px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 2000px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
-
-  /* @media (max-width: 768px) {
-    height: 200px;
-  } */
 `;
 
 const InfoRow = styled.div`
@@ -138,7 +134,7 @@ const TopLine = styled.p`
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 16px;
 `;
 
@@ -170,7 +166,7 @@ const SubTitle = styled.p`
 const ImgWrap = styled.div`
   max-width: 555px;
   height: auto;
-  background-image: url(${(props) => props.bgImg});
+  /* background-image: url(${(props) => props.bgImg}); */
   /* background-repeat: no-repeat;
   background-size: cover; */
 `;
