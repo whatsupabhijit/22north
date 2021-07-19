@@ -33,8 +33,9 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
+            {/* Toptal HTML codes: https://www.toptal.com/designers/htmlarrows/math */}
             <NavLogo to="/" onClick={toggleHome}>
-              22North
+              22<span>&#176;</span>North
             </NavLogo>
 
             <MobileIcon onClick={toggle}>
@@ -110,7 +111,7 @@ const Navbar = ({ toggle }) => {
 };
 
 const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transperant")};
+  background: ${({ scrollNav }) => (scrollNav ? "#1f4382" : "transperant")};
   height: 80px;
   margin-top: -80px;
   display: flex;

@@ -27,10 +27,13 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
-                {descriptions?.map((description) => (
-                  <SubTitle darkText={darkText}>{description}</SubTitle>
+                <TopLine>{topLine}</TopLine>
+
+                {descriptions?.map((description, i) => (
+                  <SubTitle key={i} darkText={darkText}>
+                    {description}
+                  </SubTitle>
                 ))}
 
                 {/* <BtnWrap>
@@ -78,14 +81,14 @@ const InfoContainer = styled.div`
   -webkit-filter: blur(8px); */
 
   @media (max-width: 768px) {
-    padding: 100px 0;
+    padding: 10px 0;
   }
 `;
 
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 920px;
+  height: 860px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -166,10 +169,10 @@ const SubTitle = styled.p`
 
 const ImgWrap = styled.div`
   max-width: 555px;
-  height: 100%;
+  height: auto;
   background-image: url(${(props) => props.bgImg});
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 `;
 
 const Img = styled.img`

@@ -58,10 +58,11 @@ const Footer = () => {
           <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo to="/" onClick={toggleHome}>
-                22North
+                22<span>&#176;</span>North
               </SocialLogo>
               <WebsiteRights>
-                22 North {new Date().getFullYear()}. All Rights Reserved.{" "}
+                22<span>&#176;</span>North {new Date().getFullYear()}. All
+                Rights Reserved.{" "}
               </WebsiteRights>
               <SocialIcons>
                 {/* <SocialIconLink href="/" target="_blank" aria-label="Facebook">

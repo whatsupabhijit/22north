@@ -32,7 +32,7 @@ const HeroSection = () => {
       >
         <div>
           <img src={img1} alt="asset1" />
-          {/* <p className="legend">Legend 1</p> */}
+          <HeroP className="legend">Legend 1</HeroP>
         </div>
         <div>
           <img src={img2} alt="asset2" />
@@ -49,7 +49,7 @@ const HeroSection = () => {
           <span>&#8220;</span>Dream with ambition. Lead with conviction.
           <span>&#8221;</span>
         </HeroH1>
-        <HeroP>Kamala Harris</HeroP>
+        {/* <HeroP>Kamala Harris</HeroP> */}
       </HeroContent>
     </HeroContainer>
   );
