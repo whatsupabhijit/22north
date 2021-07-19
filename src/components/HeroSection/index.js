@@ -62,6 +62,7 @@ const HeroContainer = styled.div`
   align-items: center;
   padding: 0;
   height: 700px;
+
   margin: 0;
   position: relative;
   z-index: 1;

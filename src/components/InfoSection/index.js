@@ -25,6 +25,7 @@ const InfoSection = ({
       <InfoContainer key={id} lightBg={lightBg} id={id} bgImg={backgroundImage}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
+            {/* Column 1 */}
             <Column1>
               <TextWrapper>
                 <Heading lightText={lightText}>{headLine}</Heading>
@@ -35,24 +36,10 @@ const InfoSection = ({
                     {description}
                   </SubTitle>
                 ))}
-
-                {/* <BtnWrap>
-                  <Button
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                    to="home"
-                  >
-                    {buttonLabel}
-                  </Button>
-                </BtnWrap> */}
               </TextWrapper>
             </Column1>
+
+            {/* Column 2*/}
             <Column2>
               <ImgWrap bgImg={img}>
                 {img ? <Img src={img} alt={alt} /> : <p />}
@@ -69,31 +56,27 @@ const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
-  /* background-image: url(${(props) => props.bgImg}); */
-
-  /* Center and scale the image nicely */
-  /* background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; */
-
-  /* Add the blur effect */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out; */
 
   @media (max-width: 768px) {
-    padding: 10px 0;
+    padding: 100px 0;
+  }
+
+  @media (min-width: 1398px) {
+    padding: 100px 0;
   }
 `;
 
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 950px;
+  /* height: 900px; */
   width: 100%;
-  max-width: 2000px;
+  max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  /* padding: 0 24px; */
   justify-content: center;
 `;
 
@@ -117,8 +100,8 @@ const Column1 = styled.div`
 `;
 
 const Column2 = styled.div`
-  margin: 0;
-  padding: 0;
+  margin-bottom: 15px;
+  padding: 0 15px;
   grid-area: col2;
 `;
 
@@ -158,17 +141,9 @@ const SubTitle = styled.p`
   color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
 
-// const BtnWrap = styled.div`
-//   display: flex;
-//   justify-content: flex-start;
-// `;
-
 const ImgWrap = styled.div`
   max-width: 555px;
-  height: auto;
-  /* background-image: url(${(props) => props.bgImg}); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  height: 100%;
 `;
 
 const Img = styled.img`
