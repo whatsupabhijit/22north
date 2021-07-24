@@ -1,16 +1,22 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  // Redirect,
+} from "react-router-dom";
 import Home from "./pages";
-import SignInPage from "./pages/signin";
 
 function App() {
+  const forceRefreshed = true;
+
   return (
     <div className="app">
-      <Router>
+      <Router forceRefresh={forceRefreshed}>
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/signin" component={SignInPage} exact />
+          <Route exact path="/" component={Home} />
+          {/* <Redirect to="/" /> */}
         </Switch>
       </Router>
     </div>

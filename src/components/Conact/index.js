@@ -330,7 +330,7 @@ const ContactForm = styled.div`
     box-shadow: none;
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 1024px) {
     width: 100%;
     height: auto;
   }

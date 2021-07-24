@@ -14,11 +14,6 @@ const HeroSection = () => {
   const showThumbnails = false;
   const showStatistics = false;
   const stopOnHover = false;
-  const [hover, sethover] = useState(false);
-
-  const onHover = () => {
-    sethover(!hover);
-  };
 
   return (
     <HeroContainer>
@@ -49,7 +44,7 @@ const HeroSection = () => {
           <span>&#8220;</span>Dream with ambition. Lead with conviction.
           <span>&#8221;</span>
         </HeroH1>
-        {/* <HeroP>Kamala Harris</HeroP> */}
+        <HeroP>Kamala Harris</HeroP>
       </HeroContent>
     </HeroContainer>
   );

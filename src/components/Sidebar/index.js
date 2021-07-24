@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
+// import { Link as LinkR } from "react-router-dom";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -16,22 +16,31 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="about" onClick={toggle}>
             About
           </SidebarLink>
+
           <SidebarLink to="team" onClick={toggle}>
             Team
           </SidebarLink>
+
           <SidebarLink to="services" onClick={toggle}>
             Services
           </SidebarLink>
+
+          <SidebarLink to="newsevents" onClick={toggle}>
+            News & Events
+          </SidebarLink>
+
+          <SidebarLink to="blogs" onClick={toggle}>
+            Blogs
+          </SidebarLink>
+
           <SidebarLink to="contact" onClick={toggle}>
             Contact
           </SidebarLink>
-          <SidebarLink to="Blog" onClick={toggle}>
-            Blog
-          </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
+
+        {/* <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
-        </SideBtnWrap>
+        </SideBtnWrap> */}
       </SidebarWrapper>
     </SidebarContainer>
   );
@@ -98,27 +107,27 @@ const SidebarLink = styled(LinkS)`
   }
 `;
 
-const SideBtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+// const SideBtnWrap = styled.div`
+//   display: flex;
+//   justify-content: center;
+// `;
 
-const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 16px 64px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
+// const SidebarRoute = styled(LinkR)`
+//   border-radius: 50px;
+//   background: #01bf71;
+//   white-space: nowrap;
+//   padding: 16px 64px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`;
+//   &:hover {
+//     transition: all 0.2s ease-in-out;
+//     background: #fff;
+//     color: #010606;
+//   }
+// `;
 
 export default Sidebar;

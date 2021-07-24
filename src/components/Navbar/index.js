@@ -55,6 +55,7 @@ const Navbar = ({ toggle }) => {
                   About
                 </NavLinks>
               </NavItem>
+
               <NavItem>
                 <NavLinks
                   to="team"
@@ -67,6 +68,7 @@ const Navbar = ({ toggle }) => {
                   Team
                 </NavLinks>
               </NavItem>
+
               <NavItem>
                 <NavLinks
                   to="services"
@@ -79,6 +81,33 @@ const Navbar = ({ toggle }) => {
                   Services
                 </NavLinks>
               </NavItem>
+
+              <NavItem>
+                <NavLinks
+                  to="newsevents"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  News & Events
+                </NavLinks>
+              </NavItem>
+
+              <NavItem>
+                <NavLinks
+                  to="blogs"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Blogs
+                </NavLinks>
+              </NavItem>
+
               <NavItem>
                 <NavLinks
                   to="contact"
@@ -91,17 +120,6 @@ const Navbar = ({ toggle }) => {
                   Contact
                 </NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks to="blog">Blog</NavLinks>
-              </NavItem>
-
-              {/* {navitems.map((navitem) => (
-              <NavItem>
-                <NavLinks key={navitem} to={navitem}>
-                  {navitem}
-                </NavLinks>
-              </NavItem>
-            ))} */}
             </NavMenu>
           </NavbarContainer>
         </Nav>
@@ -185,6 +203,7 @@ const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: 1.1rem;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
@@ -194,33 +213,33 @@ const NavLinks = styled(LinkS)`
   }
 `;
 
-const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
+// const NavBtn = styled.nav`
+//   display: flex;
+//   align-items: center;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
+// `;
 
-const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
+// const NavBtnLink = styled(LinkR)`
+//   border-radius: 50px;
+//   background: #01bf71;
+//   white-space: nowrap;
+//   padding: 10px 22px;
+//   color: #010606;
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`;
+//   &:hover {
+//     transition: all 0.2s ease-in-out;
+//     background: #fff;
+//     color: #010606;
+//   }
+// `;
 
 export default Navbar;
