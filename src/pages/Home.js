@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import { BrowserRouter as Router } from "react-router-dom";
-import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
-import Services from "../components/Services";
-import Contact from "../components/Conact";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Sidebar from "../components/Sidebar/Sidebar";
+
+import HeroSection from "../components/HeroSection/HeroSection";
+import InfoSection from "../components/InfoSection/InfoSection";
+import Services from "../components/Services/Services";
+import Contact from "../components/Conact/Contact";
+import Footer from "../components/Footer/Footer";
 import { homeObjAbout, homeObjTeam } from "../components/InfoSection/Data";
-import Blogs from "../components/Blogs";
-import NewsEvents from "../components/NewsEvents";
+import Blogs from "../components/Blogs/Blogs";
+import NewsEvents from "../components/NewsEvents/NewsEvents";
 
 // import { MapWrapped } from "../components/Maps";
 
@@ -23,20 +23,19 @@ const Home = () => {
 
   return (
     <>
-      <Router>
-        <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} />
-        <HeroSection />
-        <InfoSection {...homeObjAbout} />
-        <InfoSection {...homeObjTeam} />
-        <Services />
-        <hr />
-        <NewsEvents />
-        <hr />
-        <Blogs />
-        <Contact />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <HeroSection />
+      <InfoSection {...homeObjAbout} />
+      <InfoSection {...homeObjTeam} />
+      <Services />
+      <hr />
+      <NewsEvents />
+      <hr />
+      <Blogs />
+      <Contact />
 
-        {/* <div style={{ width: "100vw", height: "50vh" }}>
+      {/* <div style={{ width: "100vw", height: "50vh" }}>
           <MapWrapped
             // googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${googleMapKey}`}
@@ -46,8 +45,7 @@ const Home = () => {
           />
         </div> */}
 
-        <Footer />
-      </Router>
+      <Footer />
     </>
   );
 };

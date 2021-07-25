@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -7,9 +7,8 @@ import { Carousel } from "react-responsive-carousel";
 // import img1 from "../../assets/images/22north_HeroSection_victoria_memorial_2.jpeg";
 import img1 from "../../assets/images/victoria-memorial.jpg";
 import img2 from "../../assets/images/22north_about_howrah_bridge.jpeg";
-import img3 from "../../assets/images/victoria-memorial.jpg";
 
-import "./index.css";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   const showThumbnails = false;
