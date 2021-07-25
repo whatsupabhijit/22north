@@ -6,6 +6,12 @@
   margin: 60px auto;
 }
 
-/* .carousel li.slide img {
-  height: 760px;
-} */
+.carousel li.slide img {
+  height: 750px;
+}
+
+@media (max-width: 768px) {
+  .carousel li.slide img {
+    height: 300px;
+  }
+}

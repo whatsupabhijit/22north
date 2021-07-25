@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import Icon1 from "../../assets/images/22north_services_Guidance.svg";
-import Icon2 from "../../assets/images/22north_services_Funding.svg";
-import Icon3 from "../../assets/images/22north_services_OfficeSpace.svg";
-import Icon4 from "../../assets/images/22north_services_Business_Development.svg";
+import Icon1 from "../../assets/images/22north_Blog_1.jpg";
+import Icon2 from "../../assets/images/22north_Blog_2.jpg";
+import Icon3 from "../../assets/images/22north_Blog_3.jpg";
+import Icon4 from "../../assets/images/22north_Blog_1.jpg";
 import styled from "styled-components";
 
 const Blogs = () => {
   const [activeBlog, setActiveBlog] = useState(null);
-
   const [blogs, setBlogs] = useState([
     {
       blogIcon: Icon1,
@@ -16,7 +15,8 @@ const Blogs = () => {
       blogId: "Guidance",
       blogSelected: false,
       blogDetails:
-        "We help you fly by building the wings for you. We believe in empowering women and supporting their ventures. We aim to make our socio-economic structure a balanced one where women are at par with their men counterparts and contribute equally to our economy. Our moto would be to guide entrepreneurs (preference would be given to women entrepreneurs) to venture into demanding sectors, adapt to upcoming technologies, incubate path-breaking business ideas, introduce them to different policies and schemes, help them build a support network, guidance for the right business structure, helping them in protecting the intellectual properties, getting business loans and get them started. If your start-up is selected by our start-up development programme, we guide you through the bumpy road of entrepreneurship and prevent you from taking self-damaging decisions.",
+        // "<p><em>“There are two ways of making yourself stand out from the crowd. One is by having a job, so big you can go home before the bell rings if you want to. The other is by finding; so much to do that you must stay after the others have gone. The one who enjoys the former once took advantage of the latter”</em>                                        <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>-Henry Ford</strong></em></p>",
+        "“There are two ways of making yourself stand out from the crowd. One is by having a job, so big you can go home before the bell rings if you want to. The other is by finding; so much to do that you must stay after the others have gone. The one who enjoys the former once took advantage of the latter”                                        <strong>-Henry Ford</strong>",
     },
     {
       blogIcon: Icon2,
@@ -25,7 +25,7 @@ const Blogs = () => {
       blogId: "Funding",
       blogSelected: false,
       blogDetails:
-        "Don’t stop dreaming because of lack of funds, we keep your dreams alive, if we find them realistically achievable. We fund start-ups (with preference for female owned) which focuses on innovative business ideas, serving multiple sectors and adapts to upcoming market trends. Start-ups which embrace path-breaking technology initiatives, stands out among their competitors and are backed by potential team-members are considered to be eligible to receive funding. The applicant’s business plan should reflect business concept, strategy, plan-of-action, short term goals, long term goals, overall business growth plan and background of your management team We select and fund start-ups based on the following characteristics: Innovative business ideas Latest Technology adapter or enabler Proven track-record of serving customers Market valuation Potential growth model Scalable business model Potential Market Team credentials.",
+        "So, if you are starting a business, you’d surely like to tick off the below-mentioned checklists before taking the plunge.  After all, business is a complex venture that very few can pull off. Hence, there are certain common mistakes that one needs to avoid to see efforts come to fruition.",
     },
     {
       blogIcon: Icon3,
@@ -34,7 +34,7 @@ const Blogs = () => {
       blogId: "OfficeSpace",
       blogSelected: false,
       blogDetails:
-        "We provide ambient, shared office space in the technological hub of Kolkata. We don’t charge rent for the office space you are using, instead we consider that as our investment for letting you succeed. We know the importance of operating in the midst of your customers, and from a place which your prospective employees would find convenient to reach. Getting an office space in the most sought after location, eats up your budget in the gestation period. Instead start from a shared office space, where you might meet some of your prospective clients and partners. While we take care of your operating space, you can invest in growing your business and churning your innovative business ideas. The office space comes with a shared meeting room, from where you can crack some of your very first deals.",
+        "Starting a business can be scary, because huge risks are involved in it. But the sheer thought of owning a business and see it growing is a thrilling experience. However, there’s a big difference between starting a business and being able to turn it into a long-term success. So, what are the judicious ways to grow a startup? Let’s delve a little deeper.",
     },
     {
       blogIcon: Icon4,
@@ -43,7 +43,7 @@ const Blogs = () => {
       blogId: "BusinessDevelopment",
       blogSelected: false,
       blogDetails:
-        "Our business development partner will take care of your business development, while you focus on the R&D. We help you establish digitally, create and launch your website, maintain your social media handles, manage your SEO rating, carry out marketing campaigns and even take care of customer relationship management. Our Bus Dev partner specializes in techno-marketing and lead closure. Strategic marketing campaigns and email outreach programs through them lead to successful closure of sweet deals. We help you grow your business and guide you to stand out in a competitive market. Start-ups also get to post their expertise among numerous others in B2B Linking Platform and get matching requirements accordingly.",
+        "The technology sector has registered an exponential growth over the past decade with social media, remote communications, cloud computing, cyber security, e-commerce and robotics taking the spotlight. The COVID-19 pandemic and the resultant social distancing norms have augmented the utility of digitization even more. Per NASSCOM1, mega global tech trends are currently associated with Augmented Reality, Smart Cards, Urbanization Solution for Public, Smart Security, Smart is the New Green, Smart City Initiative India, Social Trends – Gen Y Geo Socialization, Automation, Future of Mobility and so on. While big tech behemoths have a strong foothold in the above-said areas, start-ups too are well-positioned to take the solid advantage of this boom.",
     },
   ]);
 
@@ -102,7 +102,7 @@ const Blogs = () => {
 };
 
 const BlogContainer = styled.div`
-  min-height: 800px;
+  min-height: 700px;
 `;
 
 const BlogsH1 = styled.h1`
@@ -126,17 +126,15 @@ const BlogsContainerWrapper = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 `;
 
 const BlogsCard = styled.div`
   position: relative;
   width: 300px;
-  padding: 20px;
   margin: 20px;
 
-  background: #c4d5f5;
+  /* background: #c4d5f5; */
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
@@ -159,7 +157,7 @@ const BlogsCard = styled.div`
   }
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.09);
     transition: all 0.2s ease-in-out;
   }
 `;
@@ -169,13 +167,14 @@ const BlogsIconWrapper = styled.div`
 `;
 
 const BlogsIcon = styled.img`
-  max-width: 250px;
+  max-width: 300px;
   height: 200px;
 `;
 
 const BlogsContent = styled.div`
   position: relative;
   height: 150px;
+  padding: 20px;
   overflow: hidden;
 
   &:before {
@@ -185,7 +184,8 @@ const BlogsContent = styled.div`
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(transparent, #c4d5f5);
+    /* background: linear-gradient(transparent, #c4d5f5); */
+    background: linear-gradient(transparent, #fff);
   }
 
   &.showless {
@@ -213,7 +213,8 @@ const BlogsMoreSection = styled.a`
   position: relative;
   padding: 10px 15px;
   background: #0f4cbd;
-  margin-top: 15px;
+  margin: 15px;
+
   display: inline-block;
 
   cursor: pointer;

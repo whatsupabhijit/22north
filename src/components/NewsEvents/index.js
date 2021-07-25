@@ -49,7 +49,7 @@ const NewsEvents = () => {
   return (
     <>
       <NewsEventContainer id="newsevents">
-        <NewsEventsH1>Press Releases and News</NewsEventsH1>
+        <NewsEventsH1>News and Events</NewsEventsH1>
 
         <NewsEventsContainerWrapper>
           {NewsEvents?.map((NewsEvent, i) => (
@@ -106,8 +106,9 @@ const NewsEventsH1 = styled.h1`
   margin-top: 65px;
   margin-bottom: 50px;
 
-  @media (max-width: 480px) {
-    font-size: 2rem;
+  @media (max-width: 368px) {
+    font-size: 1.5rem;
+    /* margin-left: 10px; */
   }
 `;
 
@@ -123,12 +124,12 @@ const NewsEventsContainerWrapper = styled.div`
 
 const NewsEventsCard = styled.div`
   position: relative;
-  width: 400px;
+  width: 350px;
   margin: 20px;
 
   /* background: #c4d5f5; */
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 
   &:before {
@@ -159,7 +160,7 @@ const NewsEventsIconWrapper = styled.div`
 `;
 
 const NewsEventsIcon = styled.img`
-  max-width: 400px;
+  max-width: 350px;
   height: 300px;
 `;
 

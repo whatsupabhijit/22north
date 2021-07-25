@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaGlobe } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 import { animateScroll as scroll } from "react-scroll";
@@ -34,9 +34,12 @@ const Navbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             {/* Toptal HTML codes: https://www.toptal.com/designers/htmlarrows/math */}
-            <NavLogo to="/" onClick={toggleHome}>
-              22<span>&#176;</span>North
-            </NavLogo>
+            <NavLogoWrapper>
+              <NavLogo to="/" onClick={toggleHome}>
+                22 <FaGlobe /> North
+              </NavLogo>
+              <NavTagLine>Dream For Tomorrow</NavTagLine>
+            </NavLogoWrapper>
 
             <MobileIcon onClick={toggle}>
               <FaBars />
@@ -76,7 +79,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-100}
                 >
                   Services
                 </NavLinks>
@@ -89,7 +92,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-100}
                 >
                   News & Events
                 </NavLinks>
@@ -102,7 +105,7 @@ const Navbar = ({ toggle }) => {
                   duration={500}
                   spy={true}
                   exact="true"
-                  offset={-80}
+                  offset={-100}
                 >
                   Blogs
                 </NavLinks>
@@ -155,17 +158,44 @@ const NavbarContainer = styled.div`
   /* max-width: 110px; */
 `;
 
+const NavLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
+`;
+
 const NavLogo = styled(LinkR)`
   display: flex;
   align-items: center;
   /* justify-self: flex-start; */
 
   color: #fff;
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin-left: 24px;
+  /* cursor: pointer; */
+  font-size: 1.8rem;
+
   font-weight: bold;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const NavTagLine = styled.div`
+  font-size: 15px;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 const MobileIcon = styled.div`
@@ -187,7 +217,7 @@ const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  /* margin-right: -22px; */
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -204,6 +234,7 @@ const NavLinks = styled(LinkS)`
   align-items: center;
   text-decoration: none;
   font-size: 1.1rem;
+  font-weight: 600;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;

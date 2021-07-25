@@ -60,6 +60,7 @@ const Footer = () => {
               <SocialLogo to="/" onClick={toggleHome}>
                 22<span>&#176;</span>North
               </SocialLogo>
+
               <WebsiteRights>
                 22<span>&#176;</span>North {new Date().getFullYear()}. All
                 Rights Reserved.{" "}

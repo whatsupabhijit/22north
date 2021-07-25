@@ -54,29 +54,20 @@ const InfoSection = ({
 
 const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+  background: ${({ lightBg }) => (lightBg ? "#fff" : "#010606")};
 
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out; */
-
-  @media (max-width: 768px) {
-    padding: 100px 0;
-  }
-
-  @media (min-width: 1398px) {
-    padding: 100px 0;
-  }
+  margin-top: 80px;
 `;
 
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  /* height: 900px; */
+
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  /* padding: 0 24px; */
+
   justify-content: center;
 `;
 
@@ -94,31 +85,21 @@ const InfoRow = styled.div`
 `;
 
 const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
+  margin: 25px;
+  padding: 0 5px;
   grid-area: col1;
 `;
 
 const Column2 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
+  margin-bottom: 5px;
+  padding: 0 5px;
   grid-area: col2;
 `;
 
 const TextWrapper = styled.div`
-  max-width: 540px;
+  /* max-width: 540px; */
   padding-top: 0;
   padding-bottom: 60px;
-`;
-
-const TopLine = styled.p`
-  color: #01bf71;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  /* text-transform: uppercase; */
-  margin-bottom: 16px;
 `;
 
 const Heading = styled.h1`
@@ -126,15 +107,24 @@ const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8f8" : "green")};
+  color: ${({ lightText }) => (lightText ? "#f7f8f8" : "#042157")};
 
   @media (max-width: 768px) {
     font-size: 32px;
   }
 `;
 
+const TopLine = styled.p`
+  color: #042141;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+`;
+
 const SubTitle = styled.p`
-  max-width: 440px;
+  max-width: 550px;
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 24px;
@@ -148,6 +138,7 @@ const ImgWrap = styled.div`
 
 const Img = styled.img`
   width: 100%;
+  height: 525px;
   margin: 0 0 10px 0;
   padding-right: 0;
 `;

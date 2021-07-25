@@ -36,7 +36,7 @@ export const homeObjTeam = {
   ],
   buttonLabel: "Get Started",
   imgStart: true,
-  img: require("../../assets/images/22north_team.svg").default,
+  img: require("../../assets/images/22north_team_final.jpg").default,
   alt: "BoxStep Who Are We",
   dark: true,
   dark2: false,

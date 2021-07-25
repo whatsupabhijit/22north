@@ -143,9 +143,10 @@ const ServicesCard = styled.div`
   padding: 20px;
   margin: 20px;
 
-  background: #c4d5f5;
+  /* background: #c4d5f5; */
+  background: #fff;
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 
   &:before {
@@ -192,7 +193,8 @@ const ServicesContent = styled.div`
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(transparent, #c4d5f5);
+    /* background: linear-gradient(transparent, #c4d5f5); */
+    background: linear-gradient(transparent, #fff);
   }
 
   &.showless {
