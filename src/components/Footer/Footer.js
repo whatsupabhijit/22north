@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaInstagram,
+  FaGlobe,
 } from "react-icons/fa";
 
 import { animateScroll as scroll } from "react-scroll";
@@ -42,7 +43,7 @@ const Footer = () => {
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle> Top Blogs </FooterLinkTitle>
-                <FooterLink to="/">7Ps of Marketting</FooterLink>
+                <FooterLink to="/">7Ps of Marketing</FooterLink>
                 <FooterLink to="/">Future of Startups</FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
@@ -57,13 +58,17 @@ const Footer = () => {
 
           <SocialMedia>
             <SocialMediaWrap>
-              <SocialLogo to="/" onClick={toggleHome}>
-                22<span>&#176;</span>North
-              </SocialLogo>
+              <SocialLogoWrapper to="/" onClick={toggleHome}>
+                <SocialLogo to="/">
+                  22
+                  <FaGlobe />
+                  North
+                </SocialLogo>
+                <SocialLogoTagLine>Dream For Tomorrow</SocialLogoTagLine>
+              </SocialLogoWrapper>
 
               <WebsiteRights>
-                22<span>&#176;</span>North {new Date().getFullYear()}. All
-                Rights Reserved.{" "}
+                All Rights Reserved {new Date().getFullYear()}.
               </WebsiteRights>
               <SocialIcons>
                 {/* <SocialIconLink href="/" target="_blank" aria-label="Facebook">
@@ -91,7 +96,7 @@ const Footer = () => {
                   <FaTwitter />
                 </SocialIconLink>
                 <SocialIconLink
-                  href="//www.linkedin.com/company/theboxstep"
+                  href="//www.linkedin.com/company/22northus"
                   target="_blank"
                   aria-label="LinkedIn"
                 >
@@ -188,16 +193,36 @@ const SocialMediaWrap = styled.div`
   }
 `;
 
+const SocialLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
+`;
+
 const SocialLogo = styled(Link)`
   color: #fff;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
   font-weight: bold;
+`;
+
+const SocialLogoTagLine = styled.div`
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 16px;
 `;
 
 const WebsiteRights = styled.small`

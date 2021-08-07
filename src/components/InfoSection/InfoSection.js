@@ -126,7 +126,7 @@ const TopLine = styled.p`
 const SubTitle = styled.p`
   max-width: 550px;
   margin-bottom: 25px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
 `;
@@ -138,7 +138,7 @@ const ImgWrap = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: 525px;
+  height: 480px;
   margin: 0 0 10px 0;
   padding-right: 0;
 `;

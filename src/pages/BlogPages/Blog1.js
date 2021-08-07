@@ -68,8 +68,7 @@ const Blog1 = (props) => {
 };
 
 const NavbarBackground = styled.div`
-  top: 0;
-  left: 0;
+  position: relative;
   height: 100px;
   background: #000;
 `;

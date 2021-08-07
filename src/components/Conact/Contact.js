@@ -91,7 +91,9 @@ const Contact = () => {
                   </ContactInfoSpan>
                 </IconContext.Provider>
                 <ContactInfoDetail>
-                  San Jose, <br /> CA 95124, USA
+                  San Jose
+                  <ContactInfoDetailBreak />
+                  CA 95124, USA
                 </ContactInfoDetail>
               </ContactInfoLi>
 
@@ -369,8 +371,13 @@ const ContactInfoSpan = styled.span`
 
 const ContactInfoDetail = styled.span`
   margin-left: 15px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
+`;
+
+const ContactInfoDetailBreak = styled.div`
+  font-size: 16px;
+  margin-top: 5px;
 `;
 
 //

@@ -4,10 +4,9 @@ import Icon2 from "../../assets/images/22north_services_Funding.svg";
 import Icon3 from "../../assets/images/22north_services_OfficeSpace.svg";
 import Icon4 from "../../assets/images/22north_services_Business_Development.svg";
 import styled from "styled-components";
+import ServiceModal from "../Modal/ServiceModal";
 
 const Services = () => {
-  const [activeService, setActiveService] = useState(null);
-
   const [services, setServices] = useState([
     {
       serviceIcon: Icon1,
@@ -47,6 +46,14 @@ const Services = () => {
     },
   ]);
 
+  const [activeService, setActiveService] = useState(null);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   const handleShowMoreClick = (e) => {
     for (let i = 0; i < services.length; i++) {
       if (services[i].serviceId === e.target.name) {
@@ -56,16 +63,31 @@ const Services = () => {
         // Update the services
         setServices(services);
 
+        // This below logic is for expanding the div. NOT FOR MODAL
         // Set the active service if the selected status is truthy
-        services[i].serviceSelected
-          ? setActiveService(e.target.name)
-          : setActiveService(null);
+        // services[i].serviceSelected
+        //   ? setActiveService(e.target.name)
+        //   : setActiveService(null);
+
+        // Since now opening Modal, so set the active service without checking the selected status
+        setActiveService(e.target.name);
       }
     }
+    openModal();
   };
 
   return (
     <>
+      {activeService ? (
+        <ServiceModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          service={services.filter(
+            (service) => activeService === service.serviceId
+          )}
+        />
+      ) : null}
+
       <ServiceContainer id="services">
         <ServicesH1>Our Services</ServicesH1>
 
@@ -73,7 +95,7 @@ const Services = () => {
           {services?.map((service, i) => (
             <ServicesCard
               key={i}
-              className={activeService === service.serviceId ? "showless" : ""}
+              // className={activeService === service.serviceId ? "showless" : ""}
             >
               <ServicesIconWrapper>
                 <ServicesIcon
@@ -83,22 +105,16 @@ const Services = () => {
               </ServicesIconWrapper>
 
               <ServicesContent
-                className={
-                  activeService === service.serviceId ? "showless" : ""
-                }
+              // className={ activeService === service.serviceId ? "showless" : "" }
               >
-                <ServicesH3>
-                  {service.serviceName} {service.serviceSelected}
-                </ServicesH3>
+                <ServicesH3>{service.serviceName}</ServicesH3>
                 <ServicesP> {service.serviceDetails} </ServicesP>
               </ServicesContent>
 
               <ServicesMoreSection
                 name={service.serviceId}
                 onClick={handleShowMoreClick}
-                className={
-                  activeService === service.serviceId ? "showless" : ""
-                }
+                // className={ activeService === service.serviceId ? "showless" : "" }
               />
             </ServicesCard>
           ))}

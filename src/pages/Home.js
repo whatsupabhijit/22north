@@ -29,9 +29,7 @@ const Home = () => {
       <InfoSection {...homeObjAbout} />
       <InfoSection {...homeObjTeam} />
       <Services />
-      <hr />
       <NewsEvents />
-      <hr />
       <Blogs />
       <Contact />
 
