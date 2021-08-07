@@ -18,13 +18,37 @@ const ServiceModal = ({ showModal, setShowModal, service }) => {
   });
 
   // To add the functinoality to not show the modal if clicked outside modal window
+  // useRef hook is invoked and null is passed as an argument.
+  // useRef returns an object, {current: null} initially
+  // But as soon as its attached to Background
+  // useRef will return object {current: Background div}
   const modalRef = useRef();
+  const closeModal = (e) => {
+    // If clicked on Background component, close the Modal
+    if (modalRef.current === e.target) {
+      setShowModal(false);
+    }
+  };
+
+  // if user presed Esc key then modal should close
+  const keypress = useCallback(
+    (e) => {
+      if (e.key === "Escape" && showModal) {
+        setShowModal(false);
+      }
+    },
+    [setShowModal, showModal]
+  );
+  useEffect(() => {
+    document.addEventListener("keydown", keypress);
+    return () => document.removeEventListener("keydown", keypress);
+  }, [keypress]);
 
   return (
     <>
       {showModal ? (
         <animated.div style={animation}>
-          <Background ref={modalRef}>
+          <Background ref={modalRef} onClick={closeModal}>
             <ModalWrapper showModal={showModal}>
               <ModalImg
                 src={service[0].serviceIcon}
