@@ -36,6 +36,10 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="contact" onClick={toggle}>
             Contact
           </SidebarLink>
+
+          <SidebarLink to="partners" onClick={toggle}>
+            TTN Partners
+          </SidebarLink>
         </SidebarMenu>
 
         {/* <SideBtnWrap>

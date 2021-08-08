@@ -11,6 +11,7 @@ import Footer from "../components/Footer/Footer";
 import { homeObjAbout, homeObjTeam } from "../components/InfoSection/Data";
 import Blogs from "../components/Blogs/Blogs";
 import NewsEvents from "../components/NewsEvents/NewsEvents";
+import Partners from "../components/Partners/Partners";
 
 // import { MapWrapped } from "../components/Maps";
 
@@ -32,6 +33,7 @@ const Home = () => {
       <NewsEvents />
       <Blogs />
       <Contact />
+      <Partners />
 
       {/* <div style={{ width: "100vw", height: "50vh" }}>
           <MapWrapped

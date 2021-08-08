@@ -56,7 +56,11 @@ const ServiceModal = ({ showModal, setShowModal, service }) => {
               />
               <ModalContent>
                 <h1> {service[0].serviceName} </h1>
-                <p> {service[0].serviceDetails} </p>
+
+                {service[0].serviceDetails.map((detail, i) => (
+                  <p key={i}> {detail} </p>
+                ))}
+
                 {/* <button> Join Now</button> */}
               </ModalContent>
               <ModalCloseButton
@@ -128,6 +132,8 @@ const ModalContent = styled.div`
   line-height: 1.8;
   color: #141414;
 
+  overflow-y: scroll;
+
   h1 {
     @media (max-width: 768px) {
       margin-top: 35px;
@@ -135,9 +141,10 @@ const ModalContent = styled.div`
   }
 
   p {
+    margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 50px;
-    overflow-y: scroll;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     @media (max-width: 768px) {
       padding: 25px;

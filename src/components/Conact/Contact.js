@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import * as emailjs from "emailjs-com";
+import ServiceModal from "../Modal/ServiceModal";
+import Icon1 from "../../assets/images/22north_Entrepremeur_Selection_Process.png";
 
 const Contact = () => {
   const width100 = false;
@@ -31,11 +33,11 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log("form submitted with below details");
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(message);
+    // console.log("form submitted with below details");
+    // console.log(firstName);
+    // console.log(lastName);
+    // console.log(email);
+    // console.log(message);
 
     e.preventDefault();
     const templateParams = {
@@ -74,8 +76,33 @@ const Contact = () => {
     e.target.reset();
   };
 
+  const [registerDetails] = useState([
+    {
+      serviceIcon: Icon1,
+      serviceIconAlt: "22north Services - How To Register",
+      serviceName: "Get Selected and Grow with Us",
+      serviceId: "HowToRegister",
+      serviceSelected: false,
+      serviceDetails: [
+        "22 Degrees North is keen to invest in early stage businesses which have potential to create disproportionate value. The members of the Network are leaders in the Entrepreneurial Eco-System as they have had strong operational experience as CEOs or a background of creating new and successful ventures. They share a passion to create, scale and value for start -up ventures.",
+        "So, if you have an entrepreneurial acumen and you have a promising technical idea which has a solid foundation and you belong to eastern India then 22 Degrees is a right place for you. Not only you will be assisted with a venture capital, you will get a complimentary management team which allows you to scale and nurture your idea into an established business.",
+        "If you are looking for an investment partner and are interested in getting strategical guidance, please send in a presentation comprising of 5-7 Slides (with a max file size of 5MB) covering the basic aspects of the proposition and the business plan. The presentation should comprise of your academic qualification, your business and growth plan along with a glimpse of your technical idea. Reach us on info@22north, we will be eager to help your business grow leaps and bounds.",
+      ],
+    },
+  ]);
+
+  const [showModal, setShowModal] = useState(false);
+  const handleShowMoreClick = (e) => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <>
+      <ServiceModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        service={registerDetails}
+      />
       <ContactSection id="contact">
         <ContactContainer>
           {/*  */}
@@ -224,6 +251,10 @@ const Contact = () => {
                     type="submit"
                     value="Submit"
                   ></ContactFormSubmit>
+
+                  <ContactHowToRegister onClick={handleShowMoreClick}>
+                    How To Register?
+                  </ContactHowToRegister>
                 </ContactFormInputBox>
               </ContactFormBox>
             </ContactForm>
@@ -324,7 +355,7 @@ const ContactForm = styled.div`
 
   @media (max-width: 1200px) {
     position: relative;
-    width: calc(100% - 350px);
+    width: calc(100%);
     padding-left: 0;
     margin-left: 0;
     padding: 40px;
@@ -333,6 +364,10 @@ const ContactForm = styled.div`
   }
 
   @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
     width: 100%;
     height: auto;
   }
@@ -481,6 +516,22 @@ const ContactFormSpan = styled.span`
   font-size: 18px;
   font-weight: 300;
   transition: 0.3s;
+`;
+
+const ContactHowToRegister = styled.a`
+  position: relative;
+  padding: 10px 15px;
+  display: inline-flex;
+
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #428df5;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+
+  text-decoration: underline;
+  margin-left: calc(100% - 310px);
 `;
 
 //
