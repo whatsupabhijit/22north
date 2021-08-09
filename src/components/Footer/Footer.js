@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {
-  FaFacebook,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaGlobe,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGlobe } from "react-icons/fa";
 
 import { animateScroll as scroll } from "react-scroll";
 
@@ -24,33 +17,35 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
-                <FooterLinkTitle> About Us</FooterLinkTitle>
-                <FooterLink to="/">How it works</FooterLink>
-                <FooterLink to="/">Testimonials</FooterLink>
-                <FooterLink to="/">Careers</FooterLink>
-                <FooterLink to="/">Investors</FooterLink>
-                <FooterLink to="/">Terms of Service</FooterLink>
+                <FooterLinkTitle> Sitemap </FooterLinkTitle>
+                <FooterLink to="/#about">About Us</FooterLink>
+                <FooterLink to="/#team">Management</FooterLink>
+                <FooterLink to="/#newsevents">News & Events</FooterLink>
+                <FooterLink to="/#contact">Contact</FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle> Contact Us</FooterLinkTitle>
-                <FooterLink to="/">Contact</FooterLink>
-                <FooterLink to="/">Support</FooterLink>
-                <FooterLink to="/">Subscribe</FooterLink>
-                <FooterLink to="/">Newsletters</FooterLink>
+                <FooterLinkTitle> TTN Offerings </FooterLinkTitle>
+                <FooterLink to="/">Guidance</FooterLink>
+                <FooterLink to="/">Funding</FooterLink>
+                <FooterLink to="/">Office Space</FooterLink>
+                <FooterLink to="/">BusinessDevelopment</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
 
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle> Top Blogs </FooterLinkTitle>
-                <FooterLink to="/">7Ps of Marketing</FooterLink>
-                <FooterLink to="/">Future of Startups</FooterLink>
+                <FooterLink to="/how-to-stand-out-from-the-crowd">
+                  How to Stand Out...
+                </FooterLink>
+                <FooterLink to="/insights-to-grow-your-business">
+                  Insights to grow...
+                </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
                 <FooterLinkTitle> Socaial Media</FooterLinkTitle>
-                <FooterLink to="/">Instagram</FooterLink>
+                <FooterLink to="/">Linkedin</FooterLink>
                 <FooterLink to="/">Facebook</FooterLink>
-                <FooterLink to="/">Youtube</FooterLink>
                 <FooterLink to="/">Twitter</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
@@ -68,26 +63,13 @@ const Footer = () => {
               </SocialLogoWrapper>
 
               <WebsiteRights>
-                All Rights Reserved {new Date().getFullYear()}.
+                All Rights Reserved 2020 - {new Date().getFullYear()}.
               </WebsiteRights>
               <SocialIcons>
-                {/* <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
                   <FaFacebook />
-                </SocialIconLink> */}
-                <SocialIconLink
-                  href="//www.instagram.com/the.boxstep/"
-                  target="_blank"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
                 </SocialIconLink>
-                <SocialIconLink
-                  href="//www.youtube.com/channel/UCQptTX9EcdDa7YnJXhtMEug"
-                  target="_blank"
-                  aria-label="Youtube"
-                >
-                  <FaYoutube />
-                </SocialIconLink>
+
                 <SocialIconLink
                   href="//www.twitter.com/TheBoxStep1"
                   target="_blank"

@@ -12,6 +12,7 @@ import { homeObjAbout, homeObjTeam } from "../components/InfoSection/Data";
 import Blogs from "../components/Blogs/Blogs";
 import NewsEvents from "../components/NewsEvents/NewsEvents";
 import Partners from "../components/Partners/Partners";
+import About from "../components/About/About";
 
 // import { MapWrapped } from "../components/Maps";
 
@@ -27,7 +28,8 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...homeObjAbout} />
+      <About />
+      {/* <InfoSection {...homeObjAbout} /> */}
       <InfoSection {...homeObjTeam} />
       <Services />
       <NewsEvents />

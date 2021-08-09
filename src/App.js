@@ -27,7 +27,7 @@ function App() {
           />
           <Route
             exact
-            path="/insights-to-grouw-your-business"
+            path="/insights-to-grow-your-business"
             component={Blog1}
           />
           <Route

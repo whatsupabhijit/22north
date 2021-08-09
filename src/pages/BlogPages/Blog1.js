@@ -38,9 +38,9 @@ const Blog1 = (props) => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <NavbarBackground />
+      <NavbarBackground /> */}
 
       <BlogContainer>
         <BlogCard>
@@ -67,13 +67,14 @@ const Blog1 = (props) => {
   );
 };
 
-const NavbarBackground = styled.div`
-  position: relative;
-  height: 100px;
-  background: #000;
-`;
+// const NavbarBackground = styled.div`
+//   position: relative;
+//   height: 100px;
+//   background: #000;
+// `;
 
 const BlogContainer = styled.div`
+  position: relative;
   margin: 20px 50px 50px 50px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 `;

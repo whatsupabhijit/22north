@@ -138,7 +138,7 @@ const ImgWrap = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: 480px;
+  height: 420px;
   margin: 0 0 10px 0;
   padding-right: 0;
 `;

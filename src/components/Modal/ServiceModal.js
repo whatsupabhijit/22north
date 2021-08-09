@@ -121,7 +121,8 @@ const ModalImg = styled.img`
 
   /* padding: 10px; */
   border-radius: 10px 0 0 10px;
-  background: #cfcfcf;
+  /* background: #cfcfcf; */
+  background: #000;
 `;
 
 const ModalContent = styled.div`

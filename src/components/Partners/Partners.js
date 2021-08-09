@@ -3,20 +3,14 @@ import styled from "styled-components";
 
 import "./Partners.css";
 
-import Icon1 from "../../assets/images/TTNPartner_1.jpeg";
-import Icon2 from "../../assets/images/TTNPartner_2.jpeg";
+import Icon1 from "../../assets/images/TTNPartner_1.gif";
+import Icon2 from "../../assets/images/TTNPartner_2.webp";
 import Icon3 from "../../assets/images/TTNPartner_3.jpeg";
-import Icon4 from "../../assets/images/TTNPartner_4.jpeg";
-import Icon5 from "../../assets/images/TTNPartner_5.jpeg";
-
-import { Carousel as PartnerCarousel } from "react-responsive-carousel";
+import Icon4 from "../../assets/images/TTNPartner_4.png";
+import Icon5 from "../../assets/images/TTNPartner_5.png";
+import Icon6 from "../../assets/images/TTNPartner_6.png";
 
 const Partners = () => {
-  const showThumbnails = false;
-  const showStatistics = false;
-  const stopOnHover = false;
-  const showArrows = false;
-
   return (
     <>
       <PartnerContainer id="partners">
@@ -37,34 +31,43 @@ const Partners = () => {
               contractors.
             </PartnerP>
           </PartnerContent>
-        </PartnerContainerWrapper>
 
-        <PartnerCarousel
-          className="partnercarousel"
-          autoPlay
-          infiniteLoop
-          interval="3000"
-          showStatus={showStatistics}
-          showThumbs={showThumbnails}
-          stopOnHover={stopOnHover}
-          showArrows={showArrows}
-        >
-          <div>
-            <img src={Icon1} alt="asset1" />
-          </div>
-          <div>
-            <img src={Icon2} alt="asset2" />
-          </div>
-          <div>
-            <img src={Icon3} alt="asset3" />
-          </div>
-          <div>
-            <img src={Icon4} alt="asset4" />
-          </div>
-          <div>
-            <img src={Icon5} alt="asset5" />
-          </div>
-        </PartnerCarousel>
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon1} alt={"asset1"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon2} alt={"asset2"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon3} alt={"asset3"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon4} alt={"asset4"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon5} alt={"asset5"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon6} alt={"asset6"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+        </PartnerContainerWrapper>
       </PartnerContainer>
     </>
   );
@@ -103,28 +106,36 @@ const PartnerContent = styled.div`
   position: relative;
   overflow: hidden;
   margin: 50px;
-
-  &:before {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-  }
-
-  &.showless {
-    height: auto;
-
-    &:before {
-      display: none;
-    }
-  }
 `;
 
 const PartnerP = styled.p`
   font-weight: 300;
   color: #042157;
+`;
+
+// Logos section
+
+const PartnersCard = styled.div`
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.3);
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
+const PartnersIconWrapper = styled.div`
+  margin-bottom: 10px;
+`;
+
+const PartnersIcon = styled.img`
+  max-width: 140px;
+  height: 90px;
 `;
 
 export default Partners;
