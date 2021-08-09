@@ -25,10 +25,10 @@ const Footer = () => {
               </FooterLinkItems>
               <FooterLinkItems>
                 <FooterLinkTitle> TTN Offerings </FooterLinkTitle>
-                <FooterLink to="/">Guidance</FooterLink>
-                <FooterLink to="/">Funding</FooterLink>
-                <FooterLink to="/">Office Space</FooterLink>
-                <FooterLink to="/">BusinessDevelopment</FooterLink>
+                <FooterLink to="/#services">Guidance</FooterLink>
+                <FooterLink to="/#services">Funding</FooterLink>
+                <FooterLink to="/#services">Office Space</FooterLink>
+                <FooterLink to="/#services">BusinessDevelopment</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                 </FooterLink>
               </FooterLinkItems>
               <FooterLinkItems>
-                <FooterLinkTitle> Socaial Media</FooterLinkTitle>
+                <FooterLinkTitle> Social Media</FooterLinkTitle>
                 <FooterLink to="/">Linkedin</FooterLink>
                 <FooterLink to="/">Facebook</FooterLink>
                 <FooterLink to="/">Twitter</FooterLink>

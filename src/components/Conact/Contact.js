@@ -148,32 +148,20 @@ const Contact = () => {
             <SocialMedia>
               <SocialMediaWrap>
                 <SocialIcons>
-                  {/* <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                  <FaFacebook />
-                </SocialIconLink> */}
                   <SocialIconLink
-                    href="//www.instagram.com/the.boxstep/"
+                    href="/"
                     target="_blank"
-                    aria-label="Instagram"
+                    aria-label="Facebook"
                   >
-                    <FaInstagram />
+                    <FaFacebook />
                   </SocialIconLink>
-                  <SocialIconLink
-                    href="//www.youtube.com/channel/UCQptTX9EcdDa7YnJXhtMEug"
-                    target="_blank"
-                    aria-label="Youtube"
-                  >
-                    <FaYoutube />
-                  </SocialIconLink>
-                  <SocialIconLink
-                    href="//www.twitter.com/TheBoxStep1"
-                    target="_blank"
-                    aria-label="Twitter"
-                  >
+
+                  <SocialIconLink href="/" target="_blank" aria-label="Twitter">
                     <FaTwitter />
                   </SocialIconLink>
+
                   <SocialIconLink
-                    href="//www.linkedin.com/company/theboxstep"
+                    href="//www.linkedin.com/company/22northus"
                     target="_blank"
                     aria-label="LinkedIn"
                   >

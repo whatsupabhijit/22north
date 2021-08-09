@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Icon1 from "../../assets/images/22north_NewsEvents_1.jpg";
 import Icon2 from "../../assets/images/22north_NewsEvents_2.jpg";
 import styled from "styled-components";
+import NewsEventModal from "../Modal/NewsEventModal";
 
 const NewsEvents = () => {
   const [activeNewsEvent, setActiveNewsEvent] = useState(null);
@@ -14,8 +15,9 @@ const NewsEvents = () => {
       NewsEventName: "22 North Inc. starts its operation in Silicon Valley",
       NewsEventId: "NewsEvents1",
       NewsEventSelected: false,
-      NewsEventDetails:
+      NewsEventDetails: [
         "22 North, a Silicon Valley based incubator company announced its start of operations today. The focus of the company is to help young Indian professionals realize their entrepreneurial dreams. With a considerable increase in the number of technology-startups in India, 18% of which are involved in high-end engineering, 22 North aims to help and facilitate this change in the entrepreneurial landscape. It has selected Kolkata as the base for this venture.",
+      ],
     },
     {
       NewsEventIcon: Icon2,
@@ -24,10 +26,17 @@ const NewsEvents = () => {
         "22 North Inc. funds and partners with Diverse Software Solutions",
       NewsEventId: "NewsEvents2",
       NewsEventSelected: false,
-      NewsEventDetails:
+      NewsEventDetails: [
         "22North, a Silicon Valley based incubator company, announced today its partnership with Diverse Software Solutions Inc (Divsoft) by providing funding for Divsoft’s ongoing operations, both in the US and in India. 22North provides funding, office space along with management and business development guidance to India based startups. Divsoft Solutions is the first female owned startup company 22North has venture funded, with the anticipation of funding many more such companies.",
+      ],
     },
   ]);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
 
   const handleShowMoreClick = (e) => {
     for (let i = 0; i < NewsEvents.length; i++) {
@@ -39,15 +48,28 @@ const NewsEvents = () => {
         setNewsEvents(NewsEvents);
 
         // Set the active NewsEvent if the selected status is truthy
-        NewsEvents[i].NewsEventSelected
-          ? setActiveNewsEvent(e.target.name)
-          : setActiveNewsEvent(null);
+        // NewsEvents[i].NewsEventSelected
+        //   ? setActiveNewsEvent(e.target.name)
+        //   : setActiveNewsEvent(null);
+
+        setActiveNewsEvent(e.target.name);
       }
     }
+    openModal();
   };
 
   return (
     <>
+      {activeNewsEvent ? (
+        <NewsEventModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          newsevent={NewsEvents.filter(
+            (newsevent) => activeNewsEvent === newsevent.NewsEventId
+          )}
+        />
+      ) : null}
+
       <NewsEventContainer id="newsevents">
         <NewsEventsH1>News and Events</NewsEventsH1>
 
@@ -55,9 +77,9 @@ const NewsEvents = () => {
           {NewsEvents?.map((NewsEvent, i) => (
             <NewsEventsCard
               key={i}
-              className={
-                activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
-              }
+              // className={
+              //   activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
+              // }
             >
               <NewsEventsIconWrapper>
                 <NewsEventsIcon
@@ -67,9 +89,9 @@ const NewsEvents = () => {
               </NewsEventsIconWrapper>
 
               <NewsEventsContent
-                className={
-                  activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
-                }
+              // className={
+              //   activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
+              // }
               >
                 <NewsEventsH3>
                   {NewsEvent.NewsEventName} {NewsEvent.NewsEventSelected}
@@ -80,9 +102,9 @@ const NewsEvents = () => {
               <NewsEventsMoreSection
                 name={NewsEvent.NewsEventId}
                 onClick={handleShowMoreClick}
-                className={
-                  activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
-                }
+                // className={
+                //   activeNewsEvent === NewsEvent.NewsEventId ? "showless" : ""
+                // }
               />
             </NewsEventsCard>
           ))}
