@@ -94,7 +94,7 @@ const Services = () => {
       ) : null}
 
       <ServiceContainer id="services">
-        <ServicesH1>Our Services</ServicesH1>
+        <ServicesH1> Build & Grow </ServicesH1>
 
         <ServicesContainerWrapper>
           {services?.map((service, i) => (

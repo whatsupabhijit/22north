@@ -183,7 +183,7 @@ const NewsEventsIconWrapper = styled.div`
 
 const NewsEventsIcon = styled.img`
   max-width: 350px;
-  height: 300px;
+  height: 240px;
 `;
 
 const NewsEventsContent = styled.div`

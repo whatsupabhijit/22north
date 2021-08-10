@@ -4,6 +4,7 @@
 
 .carousel .control-dots {
   margin: 60px auto;
+  opacity: 0;
 }
 
 .carousel li.slide img {
