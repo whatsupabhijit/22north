@@ -81,7 +81,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-100}
                 >
-                  Services
+                  Build & Grow
                 </NavLinks>
               </NavItem>
 
@@ -133,7 +133,7 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  TTN Partners
+                  Partners
                 </NavLinks>
               </NavItem>
             </NavMenu>

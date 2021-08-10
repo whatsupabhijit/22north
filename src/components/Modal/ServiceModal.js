@@ -77,7 +77,11 @@ const ServiceModal = ({ showModal, setShowModal, service }) => {
 
 const Background = styled.div`
   width: 100vw;
+
+  /* To add scrollable feature */
   height: 100vh;
+  overflow: scroll;
+
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;

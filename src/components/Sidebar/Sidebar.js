@@ -13,31 +13,87 @@ const Sidebar = ({ isOpen, toggle }) => {
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink
+            to="about"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-60}
+            onClick={toggle}
+          >
             About
           </SidebarLink>
 
-          <SidebarLink to="team" onClick={toggle}>
+          <SidebarLink
+            to="team"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
             Team
           </SidebarLink>
 
-          <SidebarLink to="services" onClick={toggle}>
-            Services
+          <SidebarLink
+            to="services"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
+            Build & Grow
           </SidebarLink>
 
-          <SidebarLink to="newsevents" onClick={toggle}>
+          <SidebarLink
+            to="newsevents"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
             News & Events
           </SidebarLink>
 
-          <SidebarLink to="blogs" onClick={toggle}>
+          <SidebarLink
+            to="blogs"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
             Blogs
           </SidebarLink>
 
-          <SidebarLink to="contact" onClick={toggle}>
+          <SidebarLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
             Contact
           </SidebarLink>
 
-          <SidebarLink to="partners" onClick={toggle}>
+          <SidebarLink
+            to="partners"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
             TTN Partners
           </SidebarLink>
         </SidebarMenu>

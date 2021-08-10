@@ -39,7 +39,7 @@ const AboutContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 100px;
-  box-sizing: border-box;
+
   background: linear-gradient(180deg, #008aff, #ff137d),
     url(${(props) => props.bgImg});
   background-blend-mode: screen;
@@ -50,6 +50,16 @@ const AboutContainer = styled.section`
   background-size: cover;
 
   z-index: -1;
+
+  @media (max-width: 991px) {
+    margin-top: 5px;
+    height: 40vh;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+    height: 30vh;
+  }
 `;
 
 const AboutContent = styled.div`
@@ -59,6 +69,14 @@ const AboutContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    margin-top: -80px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: -50px;
+  }
 `;
 
 const AboutH1 = styled.h1`
@@ -66,24 +84,15 @@ const AboutH1 = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8f8" : "#042157")};
+  color: "#042157";
 
   @media (max-width: 768px) {
     font-size: 32px;
   }
 `;
 
-// const TopLine = styled.p`
-//   color: #042141;
-//   font-size: 16px;
-//   line-height: 16px;
-//   font-weight: 700;
-//   letter-spacing: 1.4px;
-//   margin-bottom: 16px;
-// `;
-
 const AboutP = styled.p`
-  max-width: 1200px;
+  max-width: 90%;
   margin-bottom: 25px;
   font-size: 16px;
   line-height: 24px;

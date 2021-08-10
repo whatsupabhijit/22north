@@ -520,6 +520,14 @@ const ContactHowToRegister = styled.a`
 
   text-decoration: underline;
   margin-left: calc(100% - 310px);
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 390px) {
+    margin-left: 5px;
+  }
 `;
 
 //
