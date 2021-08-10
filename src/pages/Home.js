@@ -33,9 +33,9 @@ const Home = () => {
       <InfoSection {...homeObjTeam} />
       <Services />
       <NewsEvents />
-      <Blogs />
-      <Contact />
       <Partners />
+      <Contact />
+      <Blogs />
 
       {/* <div style={{ width: "100vw", height: "50vh" }}>
           <MapWrapped

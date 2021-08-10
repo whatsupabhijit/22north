@@ -62,7 +62,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
 
           <SidebarLink
-            to="blogs"
+            to="partners"
             smooth={true}
             duration={500}
             spy={true}
@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             offset={-80}
             onClick={toggle}
           >
-            Blogs
+            TTN Partners
           </SidebarLink>
 
           <SidebarLink
@@ -86,7 +86,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
 
           <SidebarLink
-            to="partners"
+            to="blogs"
             smooth={true}
             duration={500}
             spy={true}
@@ -94,7 +94,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             offset={-80}
             onClick={toggle}
           >
-            TTN Partners
+            Blogs
           </SidebarLink>
         </SidebarMenu>
 
