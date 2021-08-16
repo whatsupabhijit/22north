@@ -128,8 +128,8 @@ const NewsEventsH1 = styled.h1`
   margin-top: 65px;
   margin-bottom: 50px;
 
-  @media (max-width: 368px) {
-    font-size: 1.5rem;
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
     /* margin-left: 10px; */
   }
 `;

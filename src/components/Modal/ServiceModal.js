@@ -77,8 +77,6 @@ const ServiceModal = ({ showModal, setShowModal, service }) => {
 
 const Background = styled.div`
   width: 100vw;
-
-  /* To add scrollable feature */
   height: 100vh;
   overflow: scroll;
 
@@ -107,41 +105,47 @@ const ModalWrapper = styled.div`
   z-index: 9999;
   border-radius: 10px;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    grid-template-areas: "col1 col1" "col2 col2";
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr auto;
+    grid-template-areas: "col1 col1" "col2 col2"; */
   }
 `;
 
 const ModalImg = styled.img`
-  /* max-width: 250px;
-  height: 200px; */
+  /* grid-area: col1; */
   width: 100%;
   height: 100%;
 
-  @media (max-width: 768px) {
-    max-width: 120px;
-  }
-
-  /* padding: 10px; */
   border-radius: 10px 0 0 10px;
-  /* background: #cfcfcf; */
-  background: #000;
+  background: #2a036e;
+
+  @media (max-width: 768px) {
+    height: 35%;
+  }
 `;
 
 const ModalContent = styled.div`
+  /* grid-area: col2; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   line-height: 1.8;
   color: #141414;
 
+  height: 550px; /* To add scrollable feature */
   overflow-y: scroll;
 
   h1 {
     @media (max-width: 768px) {
-      margin-top: 35px;
+      font-size: 25px;
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
   }
 
@@ -152,7 +156,8 @@ const ModalContent = styled.div`
     margin-right: 1rem;
 
     @media (max-width: 768px) {
-      padding: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
   }
 

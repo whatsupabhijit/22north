@@ -26,7 +26,7 @@ const Services = () => {
       serviceId: "Funding",
       serviceSelected: false,
       serviceDetails: [
-        "Don’t stop dreaming because of lack of funds, we keep your dreams alive, if we find them realistically achievable. We fund start-ups (with preference for female owned) which focuses on innovative business ideas, serving multiple sectors and adapts to upcoming market trends. Start-ups which embrace path-breaking technology initiatives, stands out among their competitors and are backed by potential team-members are considered to be eligible to receive funding. The applicant’s business plan should reflect business concept, strategy, plan-of-action, short term goals, long term goals, overall business growth plan and background of your management team We select and fund start-ups based on the following characteristics: Innovative business ideas Latest Technology adapter or enabler Proven track-record of serving customers Market valuation Potential growth model Scalable business model Potential Market Team credentials.",
+        "As per some recently conducted studies, close to 95% new businesses tend to wind up during the first year of operations and the primary reason for this is lack of funds. And this question of financing the company is what an entrepreneur faces at every stage. While bootstrapping and crowdfunding could be some of the initial avenues of funding the company, Team TTN can step in if one is looking for securing angel investment in the early stages of building their business or looking for expansion. Team TTN is looking to fund start ups which focus on innovative business ideas and adapt to upcoming market trends.",
       ],
     },
     {
@@ -36,7 +36,7 @@ const Services = () => {
       serviceId: "OfficeSpace",
       serviceSelected: false,
       serviceDetails: [
-        "We provide ambient, shared office space in the technological hub of Kolkata. We don’t charge rent for the office space you are using, instead we consider that as our investment for letting you succeed. We know the importance of operating in the midst of your customers, and from a place which your prospective employees would find convenient to reach. Getting an office space in the most sought after location, eats up your budget in the gestation period. Instead start from a shared office space, where you might meet some of your prospective clients and partners. While we take care of your operating space, you can invest in growing your business and churning your innovative business ideas. The office space comes with a shared meeting room, from where you can crack some of your very first deals.",
+        "Even with the world moving towards a work from home model, nothing can really replace the dynamics of sitting across the table and in-person interaction. Choosing the right work space can prove to be a decisive factor in determining the success of the company. Every organization has its own identity which is reflected in the choice of accommodation. The right office contributes to the company's image and can also be important for brand buidling since this has the potential of making the first impression on potential clients, partners as well as employees. We provide ambient shared rent-free office space in the technological hub of Kolkata.",
       ],
     },
     {

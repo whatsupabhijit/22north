@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-
-import Navbar from "../../components/Navbar/Navbar";
-import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
-
 import blogs from "../../components/Blogs/BlogsData";
 
 const Blog1 = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  let history = useHistory();
+
   const [blogIcon, setBlogIcon] = useState("");
   const [blogIconAlt, setBlogIconAlt] = useState("");
   const [blogName, setBlogName] = useState("");
   const [blogDetails, setBlogDetails] = useState([]);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
 
   // console.log(props.location.pathname);
 
@@ -43,6 +41,7 @@ const Blog1 = (props) => {
       <NavbarBackground /> */}
 
       <BlogContainer>
+        <button onClick={() => history.goBack()}>Go Back</button>
         <BlogCard>
           <BlogImageWrapper>
             <BlogImage src={blogIcon} alt={blogIconAlt} />
@@ -77,6 +76,10 @@ const BlogContainer = styled.div`
   position: relative;
   margin: 20px 50px 50px 50px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    margin: 20px 20px 50px 20px;
+  }
 `;
 
 const BlogCard = styled.div`

@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 import "./Partners.css";
 
-import Icon1 from "../../assets/images/TTNPartner_1.gif";
-import Icon2 from "../../assets/images/TTNPartner_2.webp";
 import Icon3 from "../../assets/images/TTNPartner_3.jpeg";
-import Icon4 from "../../assets/images/TTNPartner_4.png";
 import Icon5 from "../../assets/images/TTNPartner_5.png";
 import Icon6 from "../../assets/images/TTNPartner_6.png";
+import Icon7 from "../../assets/images/TTNPartner_7.png";
+import Icon1 from "../../assets/images/TTNPartner_1.gif";
+import Icon2 from "../../assets/images/TTNPartner_2.webp";
+import Icon4 from "../../assets/images/TTNPartner_4.png";
 
 const Partners = () => {
   return (
@@ -34,6 +35,30 @@ const Partners = () => {
 
           <PartnersCard>
             <PartnersIconWrapper>
+              <PartnersIcon src={Icon5} alt={"asset5"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon6} alt={"asset6"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon7} alt={"asset7"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
+              <PartnersIcon src={Icon3} alt={"asset3"} />
+            </PartnersIconWrapper>
+          </PartnersCard>
+
+          <PartnersCard>
+            <PartnersIconWrapper>
               <PartnersIcon src={Icon1} alt={"asset1"} />
             </PartnersIconWrapper>
           </PartnersCard>
@@ -46,25 +71,7 @@ const Partners = () => {
 
           <PartnersCard>
             <PartnersIconWrapper>
-              <PartnersIcon src={Icon3} alt={"asset3"} />
-            </PartnersIconWrapper>
-          </PartnersCard>
-
-          <PartnersCard>
-            <PartnersIconWrapper>
               <PartnersIcon src={Icon4} alt={"asset4"} />
-            </PartnersIconWrapper>
-          </PartnersCard>
-
-          <PartnersCard>
-            <PartnersIconWrapper>
-              <PartnersIcon src={Icon5} alt={"asset5"} />
-            </PartnersIconWrapper>
-          </PartnersCard>
-
-          <PartnersCard>
-            <PartnersIconWrapper>
-              <PartnersIcon src={Icon6} alt={"asset6"} />
             </PartnersIconWrapper>
           </PartnersCard>
         </PartnerContainerWrapper>
@@ -124,7 +131,7 @@ const PartnersCard = styled.div`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: all 0.2s ease-in-out;
   }
 `;
@@ -134,8 +141,9 @@ const PartnersIconWrapper = styled.div`
 `;
 
 const PartnersIcon = styled.img`
-  max-width: 140px;
-  height: 90px;
+  max-width: 225px;
+  height: 150px;
+  padding-left: 20px;
 `;
 
 export default Partners;
