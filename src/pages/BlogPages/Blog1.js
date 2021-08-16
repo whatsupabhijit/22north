@@ -41,7 +41,6 @@ const Blog1 = (props) => {
       <NavbarBackground /> */}
 
       <BlogContainer>
-        <button onClick={() => history.goBack()}>Go Back</button>
         <BlogCard>
           <BlogImageWrapper>
             <BlogImage src={blogIcon} alt={blogIconAlt} />
@@ -61,6 +60,8 @@ const Blog1 = (props) => {
         </BlogCard>
       </BlogContainer>
 
+      <BlogButton onClick={() => history.goBack()}>Back</BlogButton>
+
       <Footer />
     </>
   );
@@ -71,6 +72,18 @@ const Blog1 = (props) => {
 //   height: 100px;
 //   background: #000;
 // `;
+
+const BlogButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  background: #1f4382;
+  color: #fff;
+  border: none;
+  margin: 20px 50px 50px 50px;
+  cursor: pointer;
+`;
 
 const BlogContainer = styled.div`
   position: relative;
