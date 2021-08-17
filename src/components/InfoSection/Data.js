@@ -7,9 +7,9 @@ export const homeObjAbout = {
   headLine: "About Us",
   topLine: "",
   descriptions: [
-    "22North (TTN) is a Silicon Valley-based Incubator Company with the aim of helping young Indian professionals realize their entrepreneurial dreams by providing seed funding. With a substantial increase in the number of deep-tech start ups,most young entrepreneurs are looking to secure angel funding in order to build and empower their dreams.",
+    "22North (TTN) is a Silicon Valley-based Incubator Company with the aim of helping young Indian professionals realize their entrepreneurial dreams by providing seed funding. With a substantial increase in the number of deep-tech start ups, most young entrepreneurs are looking to secure angel funding in order to build and empower their dreams.",
     "Team TTN is looking to do just this - help young companies get started, build a strong foundation and grow. By investing in young companies, the idea is not just to provide funding; the goal is to have a more holistic approach and involvement can include helping with corporate guidance, business development support, infrastructure as well as product and/or market due diligence.",
-    "What we are looking for is an entrepreneur's belief in himself and his dream, his willingness to pursue his dream with everything at stake. Chase your passion & Create Opportunities.",
+    "What we are looking for is an entrepreneur's belief in himself and his dream, his willingness to pursue his dream with everything at stake. Chase your Passion & Create Opportunities.",
   ],
   buttonLabel: "Get Started",
   imgStart: false,
@@ -30,7 +30,7 @@ export const homeObjTeam = {
   headLine: "Management",
   topLine: "22 North (TTN) is headed by Buddhadeb Biswas (Bud Biswas).",
   descriptions: [
-    "Backed by over 30 years of industry experience, in the field of networking and communication, Bud's knowledge of business is profound. It is his track record of transforming small start up firms into profitable business units, that prompted him to start 22 North. He founded Digital Technology, which in the year 2000 was acquired by Agilent Technologies. He was also one of the founding partners of Network Software (a network consulting company) and, CCS (an embedded software company). After this Bud founded Polaris Networks Inc (a 4G/5G networking company) in 2003. In 2020 Polaris was acquired by a US fortune 100 company.",
+    "Backed by over 30 years of industry experience in the field of networking and communication, Bud's knowledge of business is profound. It is his track record of transforming small start up firms into profitable business units, that prompted him to start 22 North. He founded Digital Technology, which in the year 2000 was acquired by Agilent Technologies. He was also one of the founding partners of Network Software (a network consulting company) and, CCS (an embedded software company). After this Bud founded Polaris Networks Inc (a 4G/5G networking company) in 2003. In 2020 Polaris was acquired by a US fortune 100 company.",
     "Ably supported by professionals from different business fields, Team TTN is the perfect blend of experience and young professional inputs to propel ideas to business realities. If you have a dream, Team TTN will empower you to realize your vision.",
   ],
   buttonLabel: "Get Started",

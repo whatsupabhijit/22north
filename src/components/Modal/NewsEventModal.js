@@ -65,8 +65,6 @@ const NewsEventModal = ({ showModal, setShowModal, newsevent }) => {
 
 const Background = styled.div`
   width: 100vw;
-
-  /* To add scrollable feature */
   height: 100vh;
   overflow: scroll;
 
@@ -98,14 +96,13 @@ const ModalWrapper = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr auto;
     grid-template-areas: "col1 col1" "col2 col2"; */
   }
 `;
 
 const ModalImg = styled.img`
-  /* max-width: 250px;
-  height: 200px; */
+  /* grid-area: col1; */
   width: 100%;
   height: 100%;
 
@@ -118,6 +115,7 @@ const ModalImg = styled.img`
 `;
 
 const ModalContent = styled.div`
+  /* grid-area: col2; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -127,6 +125,7 @@ const ModalContent = styled.div`
   padding-left: 25px;
   padding-right: 25px;
 
+  height: 600px;
   overflow-y: scroll;
 
   h1 {
@@ -147,8 +146,8 @@ const ModalContent = styled.div`
     margin-right: 1rem;
 
     @media (max-width: 768px) {
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -169,6 +168,10 @@ const ModalCloseButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 9999;
+
+  @media (max-width: 768px) {
+    color: #fff;
+  }
 `;
 
 export default NewsEventModal;

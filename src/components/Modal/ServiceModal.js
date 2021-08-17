@@ -178,6 +178,10 @@ const ModalCloseButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 9999;
+
+  @media (max-width: 768px) {
+    color: #fff;
+  }
 `;
 
 export default ServiceModal;
