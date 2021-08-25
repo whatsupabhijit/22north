@@ -50,6 +50,42 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
 
           <SidebarLink
+            to="partners"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
+            TTN Alliance
+          </SidebarLink>
+
+          <SidebarLink
+            to="rnd"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
+            Techonology Research
+          </SidebarLink>
+
+          <SidebarLink
+            to="funding"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onClick={toggle}
+          >
+            Funding
+          </SidebarLink>
+
+          <SidebarLink
             to="newsevents"
             smooth={true}
             duration={500}
@@ -59,18 +95,6 @@ const Sidebar = ({ isOpen, toggle }) => {
             onClick={toggle}
           >
             News & Events
-          </SidebarLink>
-
-          <SidebarLink
-            to="partners"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-            onClick={toggle}
-          >
-            TTN Partners
           </SidebarLink>
 
           <SidebarLink
@@ -142,11 +166,11 @@ const SidebarWrapper = styled.div`
 const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(9, 80px);
   text-align: center;
 
   @media (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(9, 60px);
   }
 `;
 

@@ -8,11 +8,17 @@ import InfoSection from "../components/InfoSection/InfoSection";
 import Services from "../components/Services/Services";
 import Contact from "../components/Conact/Contact";
 import Footer from "../components/Footer/Footer";
-import { homeObjAbout, homeObjTeam } from "../components/InfoSection/Data";
+import {
+  // homeObjAbout,
+  homeObjFunding,
+  homeObjResearch,
+  homeObjTeam,
+} from "../components/InfoSection/Data";
 import Blogs from "../components/Blogs/Blogs";
 import NewsEvents from "../components/NewsEvents/NewsEvents";
 import Partners from "../components/Partners/Partners";
 import About from "../components/About/About";
+import Research from "../components/Research/Research";
 
 // import { MapWrapped } from "../components/Maps";
 
@@ -28,13 +34,33 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
+
+      {/* 1. About */}
       <About />
-      {/* <InfoSection {...homeObjAbout} /> */}
+
+      {/* Team */}
       <InfoSection {...homeObjTeam} />
+
+      {/* Buid and Grow */}
       <Services />
-      <NewsEvents />
+
+      {/* TTN Alliance */}
       <Partners />
+
+      {/* R&D */}
+      {/* <Research /> */}
+      <InfoSection {...homeObjResearch} />
+
+      {/* Funding */}
+      <InfoSection {...homeObjFunding} />
+
+      {/* News */}
+      <NewsEvents />
+
+      {/* Contact */}
       <Contact />
+
+      {/* Blog */}
       <Blogs />
 
       {/* <div style={{ width: "100vw", height: "50vh" }}>

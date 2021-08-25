@@ -15,7 +15,7 @@ const Partners = () => {
   return (
     <>
       <PartnerContainer id="partners">
-        <PartnerH1>TTN Partners</PartnerH1>
+        <PartnerH1>TTN Alliance</PartnerH1>
 
         <PartnerContainerWrapper>
           <PartnerContent>

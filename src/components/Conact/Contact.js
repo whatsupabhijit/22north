@@ -3,17 +3,11 @@ import styled from "styled-components";
 import { ImLocation2 } from "react-icons/im";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoMailRead } from "react-icons/go";
-import {
-  FaFacebook,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import * as emailjs from "emailjs-com";
 import ServiceModal from "../Modal/ServiceModal";
-import Icon1 from "../../assets/images/22north_Entrepremeur_Selection_Process.png";
+import Icon1 from "../../assets/images/Register.jpeg";
 
 const Contact = () => {
   const width100 = false;
@@ -84,9 +78,9 @@ const Contact = () => {
       serviceId: "HowToRegister",
       serviceSelected: false,
       serviceDetails: [
-        "22 Degrees North is keen to invest in early stage businesses which have potential to create disproportionate value. The members of the Network are leaders in the Entrepreneurial Eco-System as they have had strong operational experience as CEOs or a background of creating new and successful ventures. They share a passion to create, scale and value for start -up ventures.",
-        "So, if you have an entrepreneurial acumen and you have a promising technical idea which has a solid foundation and you belong to eastern India then 22 Degrees is a right place for you. Not only you will be assisted with a venture capital, you will get a complimentary management team which allows you to scale and nurture your idea into an established business.",
-        "If you are looking for an investment partner and are interested in getting strategical guidance, please send in a presentation comprising of 5-7 Slides (with a max file size of 5MB) covering the basic aspects of the proposition and the business plan. The presentation should comprise of your academic qualification, your business and growth plan along with a glimpse of your technical idea. Reach us on info@22north, we will be eager to help your business grow leaps and bounds.",
+        "22North is keen to invest in early stage businesses which have the potential to create value. The members of the network are leaders in the Entrepreneurial ecoSystem, with strong operational experience as CEOs and/or a background of creating new and successful ventures. They share a passion to create value for start up ventures.",
+        "So, if you have an entrepreneurial acumen and  a promising technical idea, TTN is the right place for you. Not only will you be assisted with funding, you will get access to a team who will nurture your idea into an established business.",
+        "If you are looking for an investment partner and strategic guidance, please send in a presentation consisting of 5-7 Slides (with a max file size of 5MB) covering the basic aspects of the proposition and the business plan. The presentation should comprise of your academic qualification, your business and growth plan along with a glimpse of your technical idea. You can send in the presentation to info@22north.",
       ],
     },
   ]);
