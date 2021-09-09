@@ -27,7 +27,7 @@ export const homeObjTeam = {
   darkText: true,
   lightText: false,
   lightTextDesc: false,
-  headLine: "Management",
+  headLine: "Team",
   topLine: "22 North (TTN) is headed by Buddhadeb Biswas (Bud Biswas).",
   descriptions: [
     "Backed by over 30 years of industry experience in the field of networking and communication, Bud's knowledge of business is profound. It is his track record of transforming small start up firms into profitable business units, that prompted him to start 22 North. He founded Digital Technology, which in the year 2000 was acquired by Agilent Technologies. He was also one of the founding partners of Network Software (a network consulting company) and, CCS (an embedded software company). After this Bud founded Polaris Networks Inc (a 4G/5G networking company) in 2003. In 2020 Polaris was acquired by a US fortune 100 company.",
@@ -49,8 +49,8 @@ export const homeObjFunding = {
   darkText: true,
   lightText: false,
   lightTextDesc: false,
-  headLine: "Get Selected and Grow with Us",
-  topLine: "",
+  headLine: "Funding",
+  topLine: "Get Selected and Grow with Us",
   descriptions: [
     "22North is keen to invest in early stage businesses which have the potential to create value. The members of the network are leaders in the Entrepreneurial ecoSystem, with strong operational experience as CEOs and/or a background of creating new and successful ventures. They share a passion to create value for start up ventures.",
     "So, if you have an entrepreneurial acumen and a promising technical idea, TTN is the right place for you. Not only will you be assisted with funding, you will get access to a team who will nurture your idea into an established business.",
@@ -71,8 +71,8 @@ export const homeObjResearch = {
   darkText: true,
   lightText: false,
   lightTextDesc: false,
-  headLine: "Technology Research",
-  topLine: "",
+  headLine: "R&D",
+  topLine: "Technology Research",
   descriptions: [
     "We are in stealth mode about the Research and Development (R&D) in some cutting edge technology domain.",
     "  ",

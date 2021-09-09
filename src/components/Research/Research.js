@@ -6,7 +6,7 @@ const Research = () => {
     <>
       <ResearchContainer id="rnd">
         <ResearchContent>
-          <ResearchH1>Technology Research</ResearchH1>
+          <ResearchH1> Research & Development </ResearchH1>
 
           <ResearchP>
             We are in stealth mode about the Research and Development (R&D) in
@@ -21,7 +21,7 @@ const Research = () => {
 const ResearchContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
 
   display: flex;
   justify-content: space-between;
