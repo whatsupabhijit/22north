@@ -84,6 +84,7 @@ const Navbar = ({ toggle }) => {
                   Build & Grow
                 </NavLinks>
               </NavItem>
+
               <NavItem>
                 <NavLinks
                   to="partners"
@@ -271,7 +272,7 @@ const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0 1rem;
   height: 100%;
@@ -279,6 +280,10 @@ const NavLinks = styled(LinkS)`
 
   &.active {
     border-bottom: 3px solid #01bf71;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0mm.75rem;
   }
 `;
 

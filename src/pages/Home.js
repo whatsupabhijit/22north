@@ -18,12 +18,15 @@ import Blogs from "../components/Blogs/Blogs";
 import NewsEvents from "../components/NewsEvents/NewsEvents";
 import Partners from "../components/Partners/Partners";
 import About from "../components/About/About";
-import Research from "../components/Research/Research";
+// import Research from "../components/Research/Research";
 
 // import { MapWrapped } from "../components/Maps";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log("inside Home.js");
+  console.log("isOpen:", isOpen);
   // const [googleMapKey] = useState("AIzaSyAhyu1vVMMnXN60V9dOZY5LPeppuoMGpKg");
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -31,8 +34,9 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
       <Navbar toggle={toggle} />
+
       <HeroSection />
 
       {/* 1. About */}

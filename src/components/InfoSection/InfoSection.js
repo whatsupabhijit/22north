@@ -19,7 +19,6 @@ const InfoSection = ({
   //   primary,
   backgroundImage,
 }) => {
-  console.log(lightBg);
   return (
     <>
       <InfoContainer key={id} lightBg={lightBg} id={id} bgImg={backgroundImage}>

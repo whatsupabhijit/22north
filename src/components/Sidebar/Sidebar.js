@@ -5,6 +5,9 @@ import { Link as LinkS } from "react-scroll";
 // import { Link as LinkR } from "react-router-dom";
 
 const Sidebar = ({ isOpen, toggle }) => {
+  console.log("inside sidebar.js, isOpen", isOpen);
+  console.log("toggle2:", toggle, isOpen);
+
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
